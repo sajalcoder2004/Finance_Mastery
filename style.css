@@ -1,0 +1,791 @@
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* 🔹 Navbar Styles */
+.custom-navbar {
+    background: rgba(0, 0, 0, 0.1); /* Transparent Effect */
+    backdrop-filter: blur(10px); /* Glassmorphism Effect */
+    padding: 15px 0;
+    transition: all 0.3s ease-in-out;
+}
+
+/* 🔹 Navbar Brand */
+.navbar-brand {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ffffff;
+    transition: color 0.3s;
+}
+
+.navbar-brand:hover {
+    color: #ffcc00;
+}
+
+/* 🔹 Navbar Links */
+.navbar-nav .nav-link {
+    font-size: 18px;
+    font-weight: 500;
+    color: #ffffff;
+    transition: color 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffcc00;
+}
+
+/* 🔹 Smooth Fade-in Animation on Scroll */
+.custom-navbar.show-navbar {
+    background: rgba(0, 0, 0, 0.85); /* Darker Background on Scroll */
+    backdrop-filter: blur(20px);
+    transition: background 0.3s ease-in-out;
+}
+
+/* 🔹 Mobile Optimization */
+@media (max-width: 992px) {
+    .custom-navbar {
+        background: rgba(0, 0, 0, 0.9);
+    }
+
+    .navbar-nav {
+        text-align: center;
+    }
+}
+
+
+
+/* 🔹 Hero Section */
+#hero {
+    height: 100vh;
+    background: linear-gradient(135deg, #007bff, #6610f2); /* Gradient Background */
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    padding-top: 80px; /* Ensures it sits below navbar */
+}
+
+/* 🔹 Background Animation */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+#hero {
+    background-size: 200% 200%;
+    animation: gradientAnimation 10s infinite ease-in-out;
+}
+
+/* 🔹 Hero Heading */
+#hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* 🔹 Hero Subheading */
+#hero p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+/* 🔹 CTA Button */
+.custom-btn {
+    background-color: black;
+    color: #fff;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 50px;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+}
+
+.custom-btn:hover {
+    background: linear-gradient(135deg, #ffcc00, #ff9800);
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(255, 152, 0, 0.3);
+}
+
+/* 🔹 Pulse Animation for Button */
+.animate-pulse {
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* 🔹 Fade-in Animation */
+.animate-fade-in {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* 🔹 Slide-up Animation */
+.animate-slide-up {
+    animation: slideUp 1.5s ease-in-out;
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* 🔹 Lottie Animation */
+.hero-animation {
+    margin-top: 30px;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 🔹 Responsive Design */
+@media (max-width: 768px) {
+    #hero h1 {
+        font-size: 2.5rem;
+    }
+
+    #hero p {
+        font-size: 1.2rem;
+    }
+
+    .custom-btn {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    .hero-animation {
+        max-width: 250px;
+    }
+}
+
+
+
+/* 🔹 Key Benefits Section */
+#benefits {
+    text-align: center;
+}
+
+/* 🔹 Section Heading */
+#benefits h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* 🔹 Benefit Cards */
+.benefit-card {
+    background: linear-gradient(135deg, #007bff, #6610f2);
+    color: #ffffff;
+    border: none;
+    border-radius: 15px;
+    padding: 20px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.benefit-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* 🔹 Icons */
+.icon_benefit {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+/* 🔹 Fade-in Animation */
+.animate-fade-in {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* 🔹 Slide-in Animation */
+.animate-slide-in {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-out;
+}
+
+.delay-200 {
+    transition-delay: 0.2s;
+}
+
+.delay-400 {
+    transition-delay: 0.4s;
+}
+
+.delay-600 {
+    transition-delay: 0.6s;
+}
+
+/* 🔹 Reveal Animation on Scroll */
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 🔹 Responsive Design */
+@media (max-width: 768px) {
+    #benefits h2 {
+        font-size: 2rem;
+    }
+
+    .icon {
+        font-size: 2.5rem;
+    }
+}
+
+
+/* 🔹 Course Overview Section */
+#course-overview {
+    Text-align: center;
+}
+
+/* 🔹 Section Heading */
+#course-overview h2 {
+    Font-size: 2.5rem;
+    Font-weight: bold;
+    Margin-bottom: 30px;
+}
+
+/* 🔹 Bullet Points */
+.list-group-item {
+    Font-size: 18px;
+    Font-weight: 500;
+    Border: none;
+    Background: transparent;
+    Padding: 10px 0;
+    Display: flex;
+    Align-items: center;
+    Opacity: 0;  /* Hidden initially */
+    Transform: translateY(50px); /* Starts lower */
+    Transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* 🔹 Icons */
+.icon {
+    Font-size: 1.5rem;
+    Color: #28a745;
+    Margin-right: 10px;
+}
+
+/* 🔹 Animated Illustration */
+.overview-animation {
+    Max-width: 300px;
+    Margin: auto;
+}
+
+/* 🔹 Slide-in Animation */
+.delay-100 { transition-delay: 0.1s; }
+.delay-200 { transition-delay: 0.2s; }
+.delay-300 { transition-delay: 0.3s; }
+.delay-400 { transition-delay: 0.4s; }
+
+/* 🔹 Reveal Animation on Scroll */
+.show {
+    Opacity: 1;
+    Transform: translateY(0);
+}
+
+/* 🔹 Responsive Design */
+@media (max-width: 768px) {
+    #course-overview h2 {
+        Font-size: 2rem;
+    }
+
+    .icon {
+        Font-size: 1.2rem;
+    }
+
+    .overview-animation {
+        Max-width: 250px;
+    }
+}
+
+
+
+
+/* 🔹 Call-to-Action Section */
+#cta {
+    Background: linear-gradient(135deg, #6a11cb, #2575fc); /* New Gradient Background */
+    Color: #ffffff;
+    Padding: 80px 0;
+    Text-align: center;
+}
+
+/* 🔹 CTA Heading */
+#cta h2 {
+    Font-size: 2.5rem;
+    Font-weight: bold;
+    Margin-bottom: 20px;
+}
+
+/* 🔹 CTA Subtext */
+.cta-subtext {
+    Font-size: 1.2rem;
+    Margin-bottom: 20px;
+}
+
+/* 🔹 Button Container */
+.cta-buttons {
+    Display: flex;
+    Justify-content: center;
+    Gap: 15px;
+}
+
+/* 🔹 Primary CTA Button */
+.custom-btn {
+    Background: #ffffff;
+    Color: #6a11cb;
+    Padding: 12px 25px;
+    Font-size: 1.2rem;
+    Font-weight: bold;
+    Border-radius: 50px;
+    Text-transform: uppercase;
+    Transition: all 0.3s ease-in-out;
+    Display: inline-block;
+}
+
+.custom-btn:hover {
+    Background: #2575fc;
+    Color: #ffffff;
+    Transform: scale(1.05);
+    Box-shadow: 0 4px 10px rgba(38, 152, 255, 0.3);
+}
+
+/* 🔹 Secondary CTA Button */
+.secondary-btn {
+    Background: transparent;
+    Border: 2px solid #ffffff;
+    Color: #ffffff;
+    Padding: 12px 25px;
+    Font-size: 1.2rem;
+    Font-weight: bold;
+    Border-radius: 50px;
+    Text-transform: uppercase;
+    Transition: all 0.3s ease-in-out;
+    Display: inline-block;
+}
+
+.secondary-btn:hover {
+    Background: #ffffff;
+    Color: #6a11cb;
+    Transform: scale(1.05);
+}
+
+/* 🔹 Bounce Animation for Button */
+.animate-bounce {
+    Animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+/* 🔹 Fade-in Animation */
+.animate-fade-in {
+    Animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    From { opacity: 0; transform: translateY(20px); }
+    To { opacity: 1; transform: translateY(0); }
+}
+
+/* 🔹 Slide-in Animation */
+.animate-slide-in {
+    Animation: slideIn 1.5s ease-in-out;
+}
+
+@keyframes slideIn {
+    From { opacity: 0; transform: translateY(-20px); }
+    To { opacity: 1; transform: translateY(0); }
+}
+
+/* 🔹 Lottie Animation */
+.cta-animation {
+    Margin-top: 30px;
+    Max-width: 250px;
+    Margin-left: auto;
+    Margin-right: auto;
+}
+
+/* 🔹 Responsive Design */
+@media (max-width: 768px) {
+    #cta h2 {
+        Font-size: 2rem;
+    }
+
+    .cta-subtext {
+        Font-size: 1rem;
+    }
+
+    .cta-buttons {
+        Flex-direction: column;
+        Gap: 10px;
+    }
+
+    .custom-btn, .secondary-btn {
+        Font-size: 1rem;
+        Padding: 10px 20px;
+    }
+
+    .cta-animation {
+        Max-width: 200px;
+    }
+}
+
+
+
+/* 🔹 Course Modules Section */
+#course-modules {
+    text-align: center;
+}
+
+/* 🔹 Section Heading */
+#course-modules h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* 🔹 Accordion Custom Styling */
+.accordion-button {
+    font-size: 18px;
+    font-weight: bold;
+    background: linear-gradient(135deg, #007bff, #6610f2);
+    color: #ffffff;
+    transition: all 0.3s ease-in-out;
+}
+
+.accordion-button:hover {
+    background: linear-gradient(135deg, #6610f2, #007bff);
+    color: #fff;
+}
+
+/* 🔹 Responsive Design */
+@media (max-width: 768px) {
+    #course-modules h2 {
+        font-size: 2rem;
+    }
+}
+
+
+/* 🔹 Call-to-Action Section */
+#cta-enroll {
+    Background: linear-gradient(135deg, #007bff, #6610f2); /* Gradient Background */
+    Color: #ffffff;
+    Padding: 80px 0;
+    Text-align: center;
+}
+
+/* 🔹 CTA Heading */
+#cta-enroll h2 {
+    Font-size: 2.5rem;
+    Font-weight: bold;
+    Margin-bottom: 20px;
+}
+
+/* 🔹 CTA Subtext */
+.cta-subtext {
+    Font-size: 1.2rem;
+    Margin-bottom: 20px;
+}
+
+/* 🔹 Enroll Now Button */
+.custom-btn {
+    Background: #ffffff;
+    Color: #007bff;
+    Padding: 12px 25px;
+    Font-size: 1.2rem;
+    Font-weight: bold;
+    Border-radius: 50px;
+    Text-transform: uppercase;
+    Transition: all 0.3s ease-in-out;
+    Display: inline-block;
+}
+
+.custom-btn:hover {
+    Background: #6610f2;
+    Color: #ffffff;
+    Transform: scale(1.05);
+    Box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+}
+
+/* 🔹 Bounce Animation for Button */
+.animate-bounce {
+    Animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+/* 🔹 Fade-in Animation */
+.animate-fade-in {
+    Animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    From { opacity: 0; transform: translateY(20px); }
+    To { opacity: 1; transform: translateY(0); }
+}
+
+/* 🔹 Slide-in Animation */
+.animate-slide-in {
+    Animation: slideIn 1.5s ease-in-out;
+}
+
+@keyframes slideIn {
+    From { opacity: 0; transform: translateY(-20px); }
+    To { opacity: 1; transform: translateY(0); }
+}
+
+/* 🔹 Lottie Animation */
+.cta-animation {
+    Margin-top: 30px;
+    Max-width: 250px;
+    Margin-left: auto;
+    Margin-right: auto;
+}
+
+/* 🔹 Responsive Design */
+@media (max-width: 768px) {
+    #cta-enroll h2 {
+        Font-size: 2rem;
+    }
+
+    .cta-subtext {
+        Font-size: 1rem;
+    }
+
+    .custom-btn {
+        Font-size: 1rem;
+        Padding: 10px 20px;
+    }
+
+    .cta-animation {
+        Max-width: 200px;
+    }
+}
+
+
+/* 🔹 Course Lessons Section */
+#course-lessons {
+    Text-align: center;
+}
+
+/* 🔹 Section Heading */
+#course-lessons h2 {
+    Font-size: 2.5rem;
+    Font-weight: bold;
+    Margin-bottom: 30px;
+}
+
+/* 🔹 Module Tabs */
+.nav-pills .nav-link {
+    Font-size: 18px;
+    Font-weight: bold;
+    Background: #f8f9fa;
+    Color: #007bff;
+    Border-radius: 20px;
+    Margin: 5px;
+    Transition: all 0.3s ease-in-out;
+}
+
+.nav-pills .nav-link.active {
+    Background: linear-gradient(135deg, #007bff, #6610f2);
+    Color: #ffffff;
+}
+
+/* 🔹 Lesson List */
+.lesson-list {
+    List-style: none;
+    Padding: 0;
+    Text-align: left;
+    Margin: auto;
+    Max-width: 600px;
+}
+
+.lesson-list li {
+    Font-size: 18px;
+    Margin-bottom: 10px;
+    Display: flex;
+    Align-items: center;
+}
+
+.lesson-list I {
+    Color: #28a745;
+    Margin-right: 10px;
+    Font-size: 1.5rem;
+}
+
+/* 🔹 Fade-in Animation */
+.animate-fade-in {
+    Animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    From { opacity: 0; transform: translateY(20px); }
+    To { opacity: 1; transform: translateY(0); }
+}
+
+/* 🔹 Responsive Design */
+@media (max-width: 768px) {
+    #course-lessons h2 {
+        Font-size: 2rem;
+    }
+
+    .lesson-list {
+        Max-width: 100%;
+        Padding: 0 15px;
+    }
+}
+
+/* 🔹 Lesson Content */
+#lesson-content {
+    text-align: left;
+}
+
+/* 🔹 Section Titles */
+.lesson-section h3 {
+    color: #007bff;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+/* 🔹 Summary List */
+.lesson-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.lesson-section ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* 🔹 Return Button */
+.custom-btn {
+    background: #007bff;
+    color: #ffffff;
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+}
+
+.custom-btn:hover {
+    background: #6610f2;
+    color: #ffffff;
+    transform: scale(1.05);
+}
+
+
+/* 🔹 Footer Section */
+.footer {
+    background: linear-gradient(135deg, #004aad, #00c3ff); /* Dark Gradient */
+    color: #ffffff;
+    padding: 40px 0;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* 🔹 Footer Title */
+.footer-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* 🔹 Footer Links */
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    color: #cccccc;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+}
+
+/* 🔹 Social Media Icons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-link {
+    color: #cccccc;
+    font-size: 1.5rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.social-link:hover {
+    color: #ffffff;
+}
+
+/* 🔹 Copyright */
+.copyright {
+    font-size: 0.9rem;
+    margin-top: 15px;
+    color: #bbbbbb;
+}
+
+/* 🔹 Fade-in Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* 🔹 Responsive Design */
+@media (max-width: 768px) {
+    .footer-title {
+        font-size: 1.2rem;
+    }
+
+    .social-icons {
+        gap: 10px;
+    }
+
+    .social-link {
+        font-size: 1.2rem;
+    }
+}
+
+
+
+
